@@ -1,7 +1,7 @@
 """
 Portfolio Task - Week 1.3
 By submitting this code you are declaring that all work in this file, other than any provided template code, was written and developed by you independently.
-Name: 
+Name: Mana
 """
 
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
@@ -14,5 +14,17 @@ state = "red"
 print(f"Time {systime:03} State {state}")
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
+state_order = list(states)
+state_index = 0 
+time_in_state =  0
 
+for systime in range(1, maxtime + 1):
+    time_in_state += 1
+
+    if time_in_state >= states[state]:
+        state_index = (state_index + 1) % len(state_order)
+        state = state_order[state_index]
+        time_in_state = 0
+
+    print(f"Time {systime:03} State {state}")
 # At the end of each step you should output the time and state using the statement on line 14
