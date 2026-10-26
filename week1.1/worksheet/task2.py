@@ -21,7 +21,7 @@ annual_savings = amount * 12
 print(f"You will save £{annual_savings} every year.")
 
 total_savings = annual_savings * 1.008
-print(f"With Interest, you will save £{total_savings.2f} per year.")
+print(f"With Interest, you will save £{total_savings:.2f} per year.")
 
 # Calculate the total amount of money they will have saved by the end of the year (amount per month multiplied by 12).
 # print this out for the user with a suitable message.
